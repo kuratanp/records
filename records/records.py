@@ -8,10 +8,12 @@ import requests
 import pandas as pd
 
 class Records:
+
+    """
+    Class object for retreaving biodiversity data from GBIF  
+    """ 
+
     def __init__(self, q=None, interval=None):
-        """
-        Class object for retreaving biodiversity data from GBIF  
-        """
         self.q = q
         self.interval = interval
         self.params = {
@@ -50,4 +52,6 @@ class Records:
                 break
            
         return pd.DataFrame(data)
+
+
 
